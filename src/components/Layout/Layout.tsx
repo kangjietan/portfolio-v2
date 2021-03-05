@@ -1,12 +1,18 @@
 import React from "react";
 import GlobalStyle from "../../themes/GlobalStyle";
 import { Nav } from "../index";
+import { Container } from "./styles";
 
-const Layout: React.FunctionComponent = () => {
+interface Props {
+  children?: any;
+}
+
+const Layout: React.FunctionComponent = ({ children }: Props) => {
   return (
     <>
       <GlobalStyle />
       <Nav />
+      <Container>{children}</Container>
     </>
   );
 };
