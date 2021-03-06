@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import Sanitize from "./sanitize";
+import KeyFrames from "./keyframes";
 
 const GlobalStyle = createGlobalStyle`
   ${Sanitize}
@@ -22,29 +23,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--bg-color);
   }
 
-  @keyframes line-anim {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  @keyframes fill {
-    from {
-      fill: transparent;
-    }
-    to {
-      fill: #BB86FC;
-    }
-  }
-
-  @keyframes logo-fill {
-    from {
-      fill: transparent;
-    }
-    to {
-      fill: white;
-    }
-  }
+  ${KeyFrames}
 `;
 
 export default GlobalStyle;
