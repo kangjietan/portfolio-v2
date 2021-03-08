@@ -8,6 +8,8 @@ import {
 } from "./styles";
 import { animateLogoSVG } from "../../utils";
 
+import { Menu } from "../index";
+
 // @ts-ignore
 import Fade from "react-reveal/Fade";
 
@@ -66,13 +68,14 @@ const Nav: React.FunctionComponent = () => {
           <NavigationLinkContainer>
             {NavLinks.map(({ section, name }) => {
               return (
-                <NavigationLink>
+                <NavigationLink key={section}>
                   <a href={section}>{name}</a>
                 </NavigationLink>
               );
             })}
           </NavigationLinkContainer>
         </Fade>
+        <Menu />
       </Navigation>
     </Header>
   );

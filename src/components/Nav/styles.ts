@@ -9,6 +9,10 @@ export const Header = styled.header`
   background-color: var(--bg-color);
   box-shadow: 0px 10px 10px 1px var(--on-primary-color);
   padding: 0px 50px;
+
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+  }
 `;
 
 export const Navigation = styled.nav`
@@ -29,6 +33,10 @@ export const LogoContainer = styled.div`
 export const NavigationLinkContainer = styled.ul`
   display: flex;
   margin-right: 5px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavigationLink = styled.li`
