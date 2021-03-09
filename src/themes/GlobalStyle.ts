@@ -2,6 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import Sanitize from "./sanitize";
 import KeyFrames from "./keyframes";
 
+import "@fontsource/poppins";
+import "@fontsource/roboto";
+import "@fontsource/montserrat";
+import "@fontsource/oswald";
+import "@fontsource/open-sans";
+
 const GlobalStyle = createGlobalStyle`
   ${Sanitize}
 
@@ -17,10 +23,21 @@ const GlobalStyle = createGlobalStyle`
     --on-bg: #FFFFFF;
     --on-surface: #FFFFFF;
     --on-error: #000000;
+    --primary-font: 'Oswald', sans-serif;
   }
 
   body {
     background-color: var(--bg-color);
+    font-family: var(--primary-font);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    color: var(--secondary-color);
   }
 
   ${KeyFrames}
