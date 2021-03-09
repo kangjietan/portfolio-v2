@@ -77,6 +77,9 @@ export const HamburgerButton = styled.div`
 `;
 
 export const ListContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   min-height: 100vh;
   background: var(--on-primary-color);
@@ -88,5 +91,17 @@ export const ListContainer = styled.div`
     props.open ? "translateX(0vw)" : "translateX(100vw)"};
   visibility: ${(props: ListProps) => (props.open ? "visible" : "hidden")};
   margin-right: -10px;
-  opacity: 90%;
+  opacity: 92%;
+`;
+
+export const NavigationLinkContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+`;
+
+export const NavigationLink = styled.li`
+  font-size: 2rem;
 `;
