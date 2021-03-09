@@ -6,7 +6,7 @@ let lineAnim = (delay: number): string =>
 let fillAnim = (fill: string, delayIncrement: number, length: number) =>
   `${fill} 0.5s ease forwards ${delayIncrement * (length + 2.5)}s`;
 
-/** Animate the logo. Only animate fill for letters. */
+/** Only animate lines. No fill in. */
 export function animateLogoSVG(id: string, delay = 0, delayIncrement = 0) {
   const logoPaths = document.querySelectorAll(`#${id} path`);
   for (let i = 0; i < logoPaths.length; i++) {
@@ -15,15 +15,16 @@ export function animateLogoSVG(id: string, delay = 0, delayIncrement = 0) {
     path.style.strokeDashoffset = `${path.getTotalLength()}px`;
     delay += delayIncrement;
     /** Fill the letters and not rectangle */
-    if (i > 1) {
-      path.style.animation = `${lineAnim(delay)}, ${fillAnim(
-        "logo-fill",
-        delayIncrement,
-        logoPaths.length
-      )}`;
-    } else {
-      path.style.animation = `${lineAnim(delay)}`;
-    }
+    // if (i > 1) {
+    //   path.style.animation = `${lineAnim(delay)}, ${fillAnim(
+    //     "logo-fill",
+    //     delayIncrement,
+    //     logoPaths.length
+    //   )}`;
+    // } else {
+    //   path.style.animation = `${lineAnim(delay)}`;
+    // }
+    path.style.animation = `${lineAnim(delay)}`;
   }
 }
 
