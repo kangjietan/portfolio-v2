@@ -43,13 +43,4 @@ export const NavigationLink = styled.li`
   margin: 0 25px;
   font-size: 1.5rem;
   list-style: none;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    color: var(--secondary-color);
-  }
 `;
