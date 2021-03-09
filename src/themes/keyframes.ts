@@ -21,7 +21,7 @@ const KeyFrames = css`
       fill: transparent;
     }
     to {
-      fill: white;
+      fill: var(--secondary-color);
     }
   }
 `;
