@@ -24,7 +24,7 @@ export const HamburgerContainer = styled.div`
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s;
   margin-right: 10px;
 `;
 
@@ -35,7 +35,7 @@ export const HamburgerButton = styled.div`
     props.hover ? "var(--secondary-color)" : "var(--on-bg)"};
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s;
   z-index: 2;
 
   &::before,
@@ -48,7 +48,7 @@ export const HamburgerButton = styled.div`
       props.hover ? "var(--secondary-color)" : "var(--on-bg)"};
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s;
   }
 
   &::before {
@@ -86,7 +86,7 @@ export const ListContainer = styled.div`
   top: 0px;
   right: 0px;
   width: min(70vw, 400px);
-  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s;
   transform: ${(props: ListProps) =>
     props.open ? "translateX(0vw)" : "translateX(100vw)"};
   visibility: ${(props: ListProps) => (props.open ? "visible" : "hidden")};
