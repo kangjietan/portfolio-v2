@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+
+import useOnClickOutside from '../hooks/useOnClickOutside';
+
 import {
   HamburgerButton,
   HamburgerContainer,
@@ -16,6 +19,7 @@ const NavLinks = [
 ];
 
 const Menu: React.FunctionComponent = () => {
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
   const [menuOpen, setMenuOpen] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -33,10 +37,12 @@ const Menu: React.FunctionComponent = () => {
     };
   }, []);
 
+  useOnClickOutside(ref, () => setMenuOpen(false));
+
   document.documentElement.style.overflowY = menuOpen ? 'hidden' : 'visible';
 
   return (
-    <MenuContainer>
+    <MenuContainer ref={ref}>
       <ListContainer open={menuOpen}>
         <NavigationLinkContainer>
           {NavLinks.map(({ section, name }) => {
