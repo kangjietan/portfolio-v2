@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface HeaderProps {
+  direction: string;
+}
+
 export const Header = styled.header`
   position: fixed;
   top: 0;
@@ -9,6 +13,9 @@ export const Header = styled.header`
   background-color: var(--bg-color);
   box-shadow: 0px 10px 10px 1px var(--on-primary-color);
   padding: 0px 50px;
+  transform: ${(props: HeaderProps) => props.direction === 'up' ? "translateY(0)" : "translateY(-100px)"};
+  visibility: ${(props: HeaderProps) => (props.direction === 'up' ? "visible" : "hidden")};
+  transition: all 0.4s;
 
   @media (max-width: 768px) {
     padding: 0px 10px;

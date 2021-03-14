@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import useScrollDirection from "../hooks/useScrollDirection";
 
 import {
   Header,
@@ -25,11 +26,12 @@ const Nav: React.FunctionComponent = () => {
   useEffect(() => {
     // Set the id of SVG, delay time in seconds to start animation and delay between each animation
     animateLogoSVG("logo", 0, 0.4);
-    return () => {};
   }, []);
 
+  const direction = useScrollDirection({ initialDirection: "up", thresholdPixels: 100 });
+
   return (
-    <Header>
+    <Header direction={direction}>
       <Navigation>
         <LogoContainer>
           <a href="/">
