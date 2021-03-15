@@ -50,4 +50,8 @@ export const NavigationLink = styled.li`
   margin: 0 25px;
   font-size: 1.5rem;
   list-style: none;
+
+  @media (max-width: 900px) {
+    font-size: 1.3rem;
+  }
 `;
