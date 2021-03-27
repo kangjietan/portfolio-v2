@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import useOnClickOutside from '../hooks/useOnClickOutside';
+import useOnClickOutside from "../hooks/useOnClickOutside";
 
 import {
   HamburgerButton,
@@ -32,14 +32,13 @@ const Menu: React.FunctionComponent = () => {
 
   useEffect(() => {
     window.addEventListener("resize", onResize);
+    document.documentElement.style.overflowY = menuOpen ? "hidden" : "visible";
     return () => {
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [menuOpen]);
 
   useOnClickOutside(ref, () => setMenuOpen(false));
-
-  document.documentElement.style.overflowY = menuOpen ? 'hidden' : 'visible';
 
   return (
     <MenuContainer ref={ref}>
