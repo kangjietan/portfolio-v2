@@ -12,7 +12,7 @@ const KeyFrames = css`
       fill: transparent;
     }
     to {
-      fill: #bb86fc;
+      fill: var(--primary-color);
     }
   }
 
