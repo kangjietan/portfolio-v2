@@ -3,6 +3,7 @@ module.exports = {
     title: "portfolio-v2",
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
@@ -13,7 +14,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./content/images/",
       },
       __key: "images",
     },
