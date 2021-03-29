@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Hero, About, Skill } from "../components";
+import { Layout, Hero, About, Skills } from "../components";
 
 import styled from "styled-components";
 
@@ -28,7 +28,7 @@ const Index: React.FunctionComponent = () => {
       <MainContainer>
         <Hero />
         <About />
-        <Skill />
+        <Skills />
       </MainContainer>
     </Layout>
   );
