@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Hero, About } from "../components";
+import { Layout, Hero, About, Skill } from "../components";
 
 import styled from "styled-components";
 
@@ -9,12 +9,16 @@ const MainContainer = styled.main`
   margin-top: 100px;
   padding: 0px 150px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding: 0px 100px;
   }
 
   @media (max-width: 700px) {
     padding: 0px 50px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0px 25px;
   }
 `;
 
@@ -24,6 +28,7 @@ const Index: React.FunctionComponent = () => {
       <MainContainer>
         <Hero />
         <About />
+        <Skill />
       </MainContainer>
     </Layout>
   );
