@@ -21,7 +21,6 @@ export const ContentContainer = styled.div`
 export const SectionHeadingContainer = styled.div`
   color: var(--secondary-color);
   font-size: 2rem;
-  letter-spacing: 0.25rem;
   align-self: flex-start;
   border: 2px solid var(--secondary-color);
   border-width: 2px 2px;
