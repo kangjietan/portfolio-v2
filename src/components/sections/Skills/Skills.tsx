@@ -41,7 +41,6 @@ const Skills: React.FunctionComponent = () => {
           id={id}
           icon={[style as IconPrefix, icon as IconName]}
           color="var(--on-bg)"
-          size="7x"
         />
         <SkillName>{name}</SkillName>
       </SkillContainer>
