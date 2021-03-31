@@ -12,8 +12,6 @@ const ReduxSVG = () => (
       msTransform: "rotate(360deg",
       WebkitTransform: "rotate(360deg)",
       transform: "rotate(360deg)",
-      fontSize: "7em",
-      verticalAlign: "-0.125em",
     }}
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 24 24"
