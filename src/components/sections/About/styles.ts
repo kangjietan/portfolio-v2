@@ -19,10 +19,10 @@ export const ContentContainer = styled.div`
 `;
 
 export const SectionHeadingContainer = styled.div`
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 2rem;
   align-self: flex-start;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--primary-color);
   border-width: 2px 2px;
 
   @media (max-width: 500px) {
@@ -44,7 +44,7 @@ export const Container = styled.div`
   display: flex;
   max-width: 1024px;
   padding: 1rem;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--primary-color);
   border-width: 0 0 2px 2px;
 
   @media (max-width: 1100px) {
@@ -62,7 +62,7 @@ export const ImgContainer = styled.div`
   margin-left: 1rem;
 
   & > * {
-    box-shadow: 0 0 3px 2px var(--secondary-color);
+    box-shadow: 0 0 3px 2px var(--primary-color);
   }
 
   @media (max-width: 1100px) {
