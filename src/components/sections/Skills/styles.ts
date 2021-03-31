@@ -52,6 +52,10 @@ export const SkillContainer = styled.div`
   color: white;
   flex-direction: column;
   padding: 1rem;
+
+  svg {
+    font-size: 7em;
+  }
 `;
 
 export const SkillName = styled.div`
