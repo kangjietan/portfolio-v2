@@ -8,10 +8,10 @@ import {
   faReact,
   faNodeJs,
   faHtml5,
-  faCss3,
+  faCss3Alt,
   faJs,
 } from "@fortawesome/free-brands-svg-icons";
-library.add(faReact, faNodeJs, faHtml5, faCss3, faJs);
+library.add(faReact, faNodeJs, faHtml5, faCss3Alt, faJs);
 
 /**
  * https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
