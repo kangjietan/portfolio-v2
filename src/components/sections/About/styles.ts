@@ -31,7 +31,6 @@ export const SectionHeadingContainer = styled.div`
 
   @media (max-width: 300px) {
     font-size: clamp(0.5rem, 0.5rem + 2.6667vw, 1rem);
-    letter-spacing: 0;
   }
 `;
 
