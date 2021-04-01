@@ -7,7 +7,7 @@ import {
   SkillName,
   SkillOverlay,
   SkillsContainer,
-  SkillSection,
+  SkillsSection,
 } from "./styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -70,7 +70,7 @@ const Skills: React.FunctionComponent = () => {
   ];
 
   return (
-    <SkillSection>
+    <SkillsSection id="skills">
       <Fade right duration={2000}>
         <ContentContainer>
           <SectionHeadingContainer>
@@ -79,7 +79,7 @@ const Skills: React.FunctionComponent = () => {
           <SkillsContainer>{skills}</SkillsContainer>
         </ContentContainer>
       </Fade>
-    </SkillSection>
+    </SkillsSection>
   );
 };
 

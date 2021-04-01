@@ -4,7 +4,7 @@ interface SkillContainerProps {
   color: string;
 }
 
-export const SkillSection = styled.section`
+export const SkillsSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
