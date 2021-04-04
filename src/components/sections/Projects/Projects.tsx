@@ -63,8 +63,12 @@ const Projects: React.FunctionComponent = () => {
             <Heading>Projects</Heading>
           </SectionHeadingContainer>
           <ProjectsContainer>
-            {projects.map(({ node: project }: ProjectNode) => (
-              <Project project={project} key={project.frontmatter.title} />
+            {projects.map(({ node: project }: ProjectNode, idx: number) => (
+              <Project
+                project={project}
+                key={project.frontmatter.title}
+                place={idx + 1}
+              />
             ))}
           </ProjectsContainer>
         </ContentContainer>
