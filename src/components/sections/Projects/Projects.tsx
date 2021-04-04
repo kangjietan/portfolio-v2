@@ -1,22 +1,21 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FileSystemNode } from "gatsby-source-filesystem";
 
 import {
   ContentContainer,
   Heading,
-  ImageContainer,
-  ProjectContainer,
   ProjectsContainer,
   ProjectsSection,
   SectionHeadingContainer,
 } from "./styles";
 
+import Project from "./Project/Project";
+
 // @ts-ignore
 import Fade from "react-reveal/Fade";
 
-interface Project {
+export interface Project {
   excerpt: string;
   frontmatter: {
     title: string;
@@ -27,7 +26,7 @@ interface Project {
   };
 }
 
-interface ProjectNode {
+export interface ProjectNode {
   node: Project;
 }
 
@@ -64,18 +63,9 @@ const Projects: React.FunctionComponent = () => {
             <Heading>Projects</Heading>
           </SectionHeadingContainer>
           <ProjectsContainer>
-            {projects.map(({ node: project }: ProjectNode) => {
-              const { title, github, site, tech, image } = project.frontmatter;
-              const projectImg = getImage(image)!;
-              console.log(title, github, site, tech, projectImg);
-              return (
-                <ProjectContainer>
-                  <ImageContainer>
-                    <GatsbyImage image={projectImg} alt="project image" />
-                  </ImageContainer>
-                </ProjectContainer>
-              );
-            })}
+            {projects.map(({ node: project }: ProjectNode) => (
+              <Project project={project} key={project.frontmatter.title} />
+            ))}
           </ProjectsContainer>
         </ContentContainer>
       </Fade>

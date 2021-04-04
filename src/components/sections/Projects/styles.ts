@@ -28,10 +28,3 @@ export const Heading = styled.h1`
 `;
 
 export const ProjectsContainer = styled.div``;
-
-export const ProjectContainer = styled.div``;
-
-export const ImageContainer = styled.div`
-  width: 25rem;
-  margin: 1rem;
-`;
