@@ -32,6 +32,33 @@ export const ProjectContainer = styled.div`
   box-shadow: 0 0 5px var(--primary-color);
   margin-left: ${(props: ProjectContainerProps) =>
     props.place % 2 === 0 ? "10rem" : "1rem"};
+
+  @media (max-width: 1400px) {
+    width: 900px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 768px;
+    margin-left: ${(props: ProjectContainerProps) =>
+      props.place % 2 === 0 ? "6rem" : "1rem"};
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: ${(props: ProjectContainerProps) =>
+      props.place % 2 === 0 ? "2rem" : "1rem"};
+  }
+
+  @media (max-width: 800px) {
+    margin-left: ${(props: ProjectContainerProps) =>
+      props.place % 2 === 0 ? "2rem" : "1rem"};
+  }
+
+  @media (max-width: 700px) {
+    margin-left: 1rem;
+  }
 `;
 
 export const ProjectOverlay = styled.div`
@@ -54,6 +81,18 @@ export const ImageContainer = styled.div`
     box-shadow: 0 0 5px 1px var(--primary-color);
     cursor: pointer;
   }
+
+  @media (max-width: 1200px) {
+    width: 27rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    order: 0;
+  }
+
+  @media (max-width: 800px) {
+  }
 `;
 
 export const ProjectInformationContainer = styled.div`
@@ -71,6 +110,12 @@ export const ProjectInformationContainer = styled.div`
           align-items: flex-end;
         `}
   width: 50%;
+
+  @media (max-width: 1000px) {
+    text-align: left;
+    align-items: flex-start;
+    width: 95%;
+  }
 `;
 
 export const ProjectTitle = styled.div`
@@ -78,6 +123,14 @@ export const ProjectTitle = styled.div`
 
   &:hover {
     color: var(--primary-color);
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -111,9 +164,23 @@ export const TechContainer = styled.div`
     props.place % 2 === 0 ? "flex-start" : "flex-end"};
   color: var(--primary-color);
   opacity: var(--medium-text-emphasis);
+  flex-wrap: wrap;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    justify-content: flex-start;
+  }
 `;
 
 export const ExcerptContainer = styled.div`
   width: 65%;
   opacity: var(--high-text-emphasis);
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
