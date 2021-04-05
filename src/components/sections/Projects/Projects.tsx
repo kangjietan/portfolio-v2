@@ -21,7 +21,7 @@ export interface Project {
     title: string;
     image: FileSystemNode;
     github: string;
-    site: string;
+    site: string | null;
     tech: string[];
   };
 }
