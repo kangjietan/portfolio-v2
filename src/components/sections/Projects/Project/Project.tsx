@@ -54,8 +54,8 @@ const Project: React.FunctionComponent<Props> = ({ project, place }) => {
         </a>
         <ExcerptContainer>{excerpt}</ExcerptContainer>
         <TechContainer place={place}>
-          {tech.map((skill) => (
-            <span>{skill}</span>
+          {tech.map((skill, idx) => (
+            <span key={idx}>{skill}</span>
           ))}
         </TechContainer>
       </ProjectInformationContainer>
