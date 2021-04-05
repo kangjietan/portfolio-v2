@@ -57,7 +57,7 @@ const Projects: React.FunctionComponent = () => {
 
   return (
     <ProjectsSection id="projects">
-      <Fade>
+      <Fade left duration={2000}>
         <ContentContainer>
           <SectionHeadingContainer>
             <Heading>Projects</Heading>
