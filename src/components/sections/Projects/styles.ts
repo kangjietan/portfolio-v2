@@ -20,6 +20,15 @@ export const SectionHeadingContainer = styled.div`
   border: 2px solid var(--primary-color);
   border-width: 2px 2px 2px 0;
   align-self: flex-start;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: clamp(0.5rem, 0.5rem + 2.6667vw, 1rem);
+    letter-spacing: 0;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -27,4 +36,6 @@ export const Heading = styled.h1`
   padding: 1rem;
 `;
 
-export const ProjectsContainer = styled.div``;
+export const ProjectsContainer = styled.div`
+  padding: 1rem;
+`;
