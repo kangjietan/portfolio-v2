@@ -56,7 +56,7 @@ const Projects: React.FunctionComponent = () => {
   const projects = data.allMdx.edges;
 
   return (
-    <ProjectsSection>
+    <ProjectsSection id="projects">
       <Fade>
         <ContentContainer>
           <SectionHeadingContainer>
