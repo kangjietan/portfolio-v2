@@ -40,13 +40,15 @@ const Menu: React.FunctionComponent = () => {
 
   useOnClickOutside(ref, () => setMenuOpen(false));
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <MenuContainer ref={ref}>
       <ListContainer open={menuOpen}>
         <NavigationLinkContainer>
           {NavLinks.map(({ section, name }) => {
             return (
-              <NavigationLink key={section}>
+              <NavigationLink key={section} onClick={closeMenu}>
                 <a href={section}>{name}</a>
               </NavigationLink>
             );
