@@ -10,8 +10,18 @@ import {
   faHtml5,
   faCss3Alt,
   faJs,
+  faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
-library.add(faReact, faNodeJs, faHtml5, faCss3Alt, faJs);
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
+library.add(
+  faReact,
+  faNodeJs,
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faGithubSquare,
+  faExternalLinkSquareAlt
+);
 
 /**
  * https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
