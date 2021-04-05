@@ -16,6 +16,10 @@ interface ProjectInformationContainerProps {
   place: number;
 }
 
+interface TechContainerProps {
+  place: number;
+}
+
 export const ProjectContainer = styled.div`
   display: flex;
   position: relative;
@@ -23,13 +27,11 @@ export const ProjectContainer = styled.div`
   padding: 1rem;
   margin: 4rem 1rem;
   justify-content: space-between;
-  max-width: 900px;
-  width: 900px;
+  max-width: 1024px;
+  width: 1024px;
   box-shadow: 0 0 5px var(--primary-color);
   margin-left: ${(props: ProjectContainerProps) =>
     props.place % 2 === 0 ? "10rem" : "1rem"};
-  /* transform: ${(props: ProjectContainerProps) =>
-    props.place % 2 === 0 ? "translateX(10rem)" : "translateX(1rem)"}; */
 `;
 
 export const ProjectOverlay = styled.div`
@@ -44,13 +46,13 @@ export const ProjectOverlay = styled.div`
 
 export const ImageContainer = styled.div`
   width: 30rem;
-  /* height: 15rem; */
   transform: translateY(-3rem);
-  /* box-shadow: 0 0 5px var(--primary-color); */
   order: ${(props: ImageContainerProps) => (props.place % 2 === 0 ? 1 : 0)};
+  z-index: 2;
 
-  & > * {
-    box-shadow: 0 0 5px var(--primary-color);
+  & > a * {
+    box-shadow: 0 0 5px 1px var(--primary-color);
+    cursor: pointer;
   }
 `;
 
@@ -58,12 +60,25 @@ export const ProjectInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 2;
-  text-align: ${(props: ProjectInformationContainerProps) =>
-    props.place % 2 === 0 ? "left" : "right"};
+  ${(props: ProjectInformationContainerProps) =>
+    props.place % 2 === 0
+      ? css`
+          text-align: left;
+          align-items: flex-start;
+        `
+      : css`
+          text-align: right;
+          align-items: flex-end;
+        `}
+  width: 50%;
 `;
 
 export const ProjectTitle = styled.div`
   font-size: 2rem;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -73,16 +88,32 @@ export const LinksContainer = styled.div`
     props.place % 2 === 0 ? "flex-start" : "flex-end"};
 `;
 
-export const GitHubLink = styled.div`
+export const GitHubLink = styled.a`
+  cursor: pointer;
   &:hover {
     color: var(--primary-color);
   }
 `;
 
-export const LiveSiteLink = styled.div`
+export const LiveSiteLink = styled.a`
+  cursor: pointer;
   &:hover {
     color: var(--primary-color);
   }
 `;
 
-export const TechContainer = styled.div``;
+export const TechContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  justify-content: ${(props: TechContainerProps) =>
+    props.place % 2 === 0 ? "flex-start" : "flex-end"};
+  color: var(--primary-color);
+  opacity: var(--medium-text-emphasis);
+`;
+
+export const ExcerptContainer = styled.div`
+  width: 65%;
+  opacity: var(--high-text-emphasis);
+`;
