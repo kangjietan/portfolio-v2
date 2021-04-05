@@ -11,8 +11,10 @@ import {
   faCss3Alt,
   faJs,
   faGithubSquare,
+  faLinkedin,
+  faAngellist,
 } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faExternalLinkSquareAlt, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faReact,
   faNodeJs,
@@ -20,7 +22,10 @@ library.add(
   faCss3Alt,
   faJs,
   faGithubSquare,
-  faExternalLinkSquareAlt
+  faExternalLinkSquareAlt,
+  faLinkedin,
+  faAngellist,
+  faFilePdf
 );
 
 /**
