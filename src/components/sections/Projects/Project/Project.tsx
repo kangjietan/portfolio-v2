@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ExcerptContainer,
   GitHubLink,
   ImageContainer,
   LinksContainer,
@@ -24,32 +25,37 @@ interface Props {
 
 const Project: React.FunctionComponent<Props> = ({ project, place }) => {
   const { title, github, site, tech, image } = project.frontmatter;
+  const { excerpt } = project;
   const projectImg = getImage(image)!;
-  console.log(place, title, github, site, tech, projectImg);
-  console.log(place % 2 === 0 ? 2 : 1);
+
   return (
     <ProjectContainer place={place}>
       <ImageContainer place={place}>
-        <GatsbyImage image={projectImg} alt="project image" />
+        <a href={site || github} target="_blank">
+          <GatsbyImage image={projectImg} alt="project image" />
+        </a>
       </ImageContainer>
       <ProjectInformationContainer place={place}>
         <LinksContainer place={place}>
-          <GitHubLink>
+          <GitHubLink href={github} target="_blank">
             <FontAwesomeIcon icon={["fab", "github-square"]} size="2x" />
-            <a href={github} target="_blank" rel="noopener noreferrer"></a>
           </GitHubLink>
-          <LiveSiteLink>
-            <FontAwesomeIcon
-              icon={["fas", "external-link-square-alt"]}
-              size="2x"
-            />
-            <a href={site} target="_blank" rel="noopener noreferrer"></a>
-          </LiveSiteLink>
+          {site !== null ? (
+            <LiveSiteLink href={site} target="_blank">
+              <FontAwesomeIcon
+                icon={["fas", "external-link-square-alt"]}
+                size="2x"
+              />
+            </LiveSiteLink>
+          ) : null}
         </LinksContainer>
-        <ProjectTitle>{title}</ProjectTitle>
-        <TechContainer>
+        <a href={site || github} target="_blank">
+          <ProjectTitle>{title}</ProjectTitle>
+        </a>
+        <ExcerptContainer>{excerpt}</ExcerptContainer>
+        <TechContainer place={place}>
           {tech.map((skill) => (
-            <div>{skill}</div>
+            <span>{skill}</span>
           ))}
         </TechContainer>
       </ProjectInformationContainer>
