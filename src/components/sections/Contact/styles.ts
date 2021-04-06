@@ -18,6 +18,10 @@ export const ContentContainer = styled.div`
   position: relative;
   width: 768px;
   padding: 1rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const ContentOverlay = styled.div`
@@ -39,8 +43,7 @@ export const SectionHeadingContainer = styled.div`
   }
 
   @media (max-width: 300px) {
-    font-size: clamp(0.5rem, 0.5rem + 2.6667vw, 1rem);
-    letter-spacing: 0;
+    font-size: clamp(0.25rem, 0.5rem + 2.6667vw, 1rem);
   }
 `;
 
@@ -53,12 +56,27 @@ export const TextContainer = styled.div`
   font-size: 2rem;
   color: var(--secondary-color);
   align-self: center;
+
+  @media (max-width: 310px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 270px) {
+    font-size: clamp(0.5rem, 0.5rem + 2.6667vw, 1.25rem);
+  }
 `;
 
 export const SocialsResumeContainer = styled.div`
   display: flex;
   justify-content: space-around;
   z-index: 2;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
 `;
 
 export const SocialsContainer = styled.div`
@@ -69,6 +87,18 @@ export const SocialsContainer = styled.div`
   width: 45%;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+
+  @media (max-width: 450px) {
+    width: 65%;
+  }
+
+  @media (max-width: 350px) {
+    width: 80%;
+  }
+
+  @media (max-width: 270px) {
+    width: 100%;
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -88,6 +118,22 @@ export const SocialContainer = styled.div`
   & span {
     font-size: 1.5rem;
   }
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+
+    & span {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    font-size: 2rem;
+
+    & span {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const ResumeContainer = styled.div`
@@ -103,16 +149,44 @@ export const ResumeContainer = styled.div`
   &:hover > * {
     color: var(--secondary-color);
   }
+
+  @media (max-width: 450px) {
+    width: 65%;
+  }
+
+  @media (max-width: 350px) {
+    width: 80%;
+  }
+
+  @media (max-width: 270px) {
+    width: 100%;
+  }
 `;
 
 export const ResumeFileSVGContainer = styled.div`
   color: inherit;
   font-size: 3rem;
   cursor: pointer;
+
+  @media (max-width: 800px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ViewResume = styled.div`
   color: inherit;
   cursor: pointer;
   font-size: 1.5rem;
+
+  @media (max-width: 800px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 `;
