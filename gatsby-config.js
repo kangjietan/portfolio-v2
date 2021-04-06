@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "portfolio-v2",
+    description: "Kang Jie Tan's personal portfolio developed with Gatsby.",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -10,6 +11,18 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-typescript",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `${__dirname}/content/images/favicon.png`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
