@@ -1,4 +1,6 @@
 import React from "react";
+import Helmet from "react-helmet";
+import useSiteMetadata from "../hooks/useSiteMetadata";
 import GlobalStyle from "../../themes/GlobalStyle";
 import { Nav } from "../index";
 import { Container } from "./styles";
@@ -14,7 +16,10 @@ import {
   faLinkedin,
   faAngellist,
 } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkSquareAlt, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import {
+  faExternalLinkSquareAlt,
+  faFilePdf,
+} from "@fortawesome/free-solid-svg-icons";
 library.add(
   faReact,
   faNodeJs,
@@ -42,8 +47,14 @@ interface Props {
 }
 
 const Layout: React.FunctionComponent = ({ children }: Props) => {
+  const { title, description } = useSiteMetadata();
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <GlobalStyle />
       <Nav />
       <Container>{children}</Container>
