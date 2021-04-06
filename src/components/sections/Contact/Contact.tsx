@@ -30,23 +30,36 @@ const Contact: React.FunctionComponent = () => {
         <SocialsResumeContainer>
           <SocialsContainer>
             <SocialContainer>
-              <FontAwesomeIcon icon={["fab", "github-square"]} />
-              <span>GitHub</span>
+              <a href="https://github.com/kangjietan" target="_blank">
+                <FontAwesomeIcon icon={["fab", "github-square"]} />
+                <span>GitHub</span>
+              </a>
             </SocialContainer>
             <SocialContainer>
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-              <span>LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/kang-jie-tan-68356b177"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                <span>LinkedIn</span>
+              </a>
             </SocialContainer>
             <SocialContainer>
-              <FontAwesomeIcon icon={["fab", "angellist"]} />
-              <span>AngelList</span>
+              <a href="https://angel.co/u/kang-jie-tan" target="_blank">
+                <FontAwesomeIcon icon={["fab", "angellist"]} />
+                <span>AngelList</span>
+              </a>
             </SocialContainer>
           </SocialsContainer>
           <ResumeContainer>
-            <ResumeFileSVGContainer>
-              <FontAwesomeIcon icon={["fas", "file-pdf"]} />
-            </ResumeFileSVGContainer>
-            <ViewResume>View Resume</ViewResume>
+            <a href="/Resume.pdf" target="_blank">
+              <ResumeFileSVGContainer>
+                <FontAwesomeIcon icon={["fas", "file-pdf"]} />
+              </ResumeFileSVGContainer>
+            </a>
+            <a href="/Resume.pdf" target="_blank">
+              <ViewResume>View Resume</ViewResume>
+            </a>
           </ResumeContainer>
         </SocialsResumeContainer>
         <ContentOverlay />
