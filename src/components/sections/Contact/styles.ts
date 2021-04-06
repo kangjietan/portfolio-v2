@@ -58,6 +58,7 @@ export const TextContainer = styled.div`
 export const SocialsResumeContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 `;
 
 export const SocialsContainer = styled.div`
@@ -65,12 +66,20 @@ export const SocialsContainer = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
 `;
 
 export const SocialContainer = styled.div`
-  color: white;
+  color: var(--on-bg);
   font-size: 3rem;
+  cursor: pointer;
+  padding-left: 1rem;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
 
   & svg {
     margin-right: 0.5rem;
@@ -86,15 +95,24 @@ export const ResumeContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
+  color: var(--on-bg);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+
+  &:hover > * {
+    color: var(--secondary-color);
+  }
 `;
 
 export const ResumeFileSVGContainer = styled.div`
-  color: white;
+  color: inherit;
   font-size: 3rem;
+  cursor: pointer;
 `;
 
 export const ViewResume = styled.div`
-  color: white;
+  color: inherit;
+  cursor: pointer;
   font-size: 1.5rem;
 `;
