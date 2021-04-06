@@ -16,11 +16,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@fontsource/montserrat": "^4.2.2",
-    "@fontsource/open-sans": "^4.2.2",
-    "@fontsource/oswald": "^4.2.2",
     "@fontsource/poppins": "^4.2.2",
-    "@fontsource/roboto": "^4.2.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
