@@ -3,10 +3,6 @@ import Sanitize from "./sanitize";
 import KeyFrames from "./keyframes";
 
 import "@fontsource/poppins";
-import "@fontsource/roboto";
-import "@fontsource/montserrat";
-import "@fontsource/oswald";
-import "@fontsource/open-sans";
 
 const GlobalStyle = createGlobalStyle`
   ${Sanitize}
@@ -23,7 +19,9 @@ const GlobalStyle = createGlobalStyle`
     --on-bg: #FFFFFF;
     --on-surface: #FFFFFF;
     --on-error: #000000;
-    --primary-font: 'Oswald', sans-serif;
+    --high-text-emphasis: 80%;
+    --medium-text-emphasis: 60%;
+    --primary-font: 'Poppins', sans-serif;
   }
 
   body {
@@ -33,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: white;
+    color: var(--on-bg);
   }
 
   a:hover {
