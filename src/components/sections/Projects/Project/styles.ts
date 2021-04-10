@@ -136,9 +136,12 @@ export const ProjectTitle = styled.div`
 
 export const LinksContainer = styled.div`
   display: flex;
-  gap: 0.5rem;
   justify-content: ${(props: LinksContainerProps) =>
     props.place % 2 === 0 ? "flex-start" : "flex-end"};
+
+  & a:nth-child(2) {
+    margin-left: 0.5rem;
+  }
 `;
 
 export const GitHubLink = styled.a`
@@ -157,7 +160,6 @@ export const LiveSiteLink = styled.a`
 
 export const TechContainer = styled.div`
   display: flex;
-  gap: 0.5rem;
   font-size: 1rem;
   margin-top: 1rem;
   justify-content: ${(props: TechContainerProps) =>
@@ -169,6 +171,14 @@ export const TechContainer = styled.div`
   @media (max-width: 1000px) {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  & span {
+    margin-right: 0.5rem;
+  }
+
+  & span:last-child {
+    margin-right: 0;
   }
 `;
 
