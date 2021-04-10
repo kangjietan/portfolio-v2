@@ -5,8 +5,7 @@ export const ContactSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 10rem;
-  margin-bottom: 2rem;
+  margin: 10rem 0;
 `;
 
 export const ContentContainer = styled.div`
@@ -75,7 +74,6 @@ export const SocialsResumeContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
   }
 `;
 
@@ -90,6 +88,7 @@ export const SocialsContainer = styled.div`
 
   @media (max-width: 450px) {
     width: 65%;
+    margin-bottom: 0.5rem;
   }
 
   @media (max-width: 350px) {
