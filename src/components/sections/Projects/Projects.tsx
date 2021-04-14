@@ -32,8 +32,11 @@ export interface ProjectNode {
 
 const Projects: React.FunctionComponent = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMdx(sort: { fields: [frontmatter___place], order: DESC }) {
+    {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/content/" } }
+        sort: { fields: [frontmatter___place], order: DESC }
+      ) {
         edges {
           node {
             frontmatter {
