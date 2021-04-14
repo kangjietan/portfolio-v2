@@ -28,7 +28,10 @@ const Nav: React.FunctionComponent = () => {
     animateLogoSVG("logo", 0, 0.4);
   }, []);
 
-  const direction = useScrollDirection({ initialDirection: "up", thresholdPixels: 100 });
+  const direction = useScrollDirection({
+    initialDirection: "up",
+    thresholdPixels: 100,
+  });
 
   return (
     <Header direction={direction}>
