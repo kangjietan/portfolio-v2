@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GlobalStyle from "../../themes/GlobalStyle";
+import GlobalStyle from "../themes/GlobalStyle";
 
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -14,7 +14,7 @@ import {
   ExperienceContainer,
   ImageContainer,
   ParallaxContainer,
-} from "./styles";
+} from "../styles/fullresumepage";
 
 // @ts-ignore
 import Fade from "react-reveal/Fade";
