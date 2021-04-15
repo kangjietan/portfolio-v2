@@ -85,6 +85,7 @@ export const SocialsContainer = styled.div`
   width: 45%;
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+  padding: 1rem 0;
 
   @media (max-width: 450px) {
     width: 65%;
@@ -133,6 +134,17 @@ export const SocialContainer = styled.div`
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 250px) {
+    & a {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & span {
+      margin: 0.35rem 0px;
+    }
+  }
 `;
 
 export const ResumeContainer = styled.div`
@@ -144,6 +156,7 @@ export const ResumeContainer = styled.div`
   color: var(--on-bg);
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+  padding: 1rem 0.25rem;
 
   &:hover > * {
     color: var(--secondary-color);
@@ -180,6 +193,7 @@ export const ViewResume = styled.div`
   color: inherit;
   cursor: pointer;
   font-size: 1.5rem;
+  text-align: center;
 
   @media (max-width: 800px) {
     font-size: 1.25rem;
