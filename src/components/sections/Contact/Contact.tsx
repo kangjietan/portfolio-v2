@@ -58,7 +58,7 @@ const Contact: React.FunctionComponent = () => {
               </ResumeFileSVGContainer>
             </a>
             <a href="/Resume.pdf" target="_blank">
-              <ViewResume>View Resume</ViewResume>
+              <ViewResume>View Resume PDF</ViewResume>
             </a>
           </ResumeContainer>
         </SocialsResumeContainer>
