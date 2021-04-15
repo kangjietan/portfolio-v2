@@ -20,7 +20,7 @@ type NavigationText = "Read More" | "Full Resume";
 
 const About: React.FunctionComponent = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "profile.jpg" }) {
         childImageSharp {
           gatsbyImageData

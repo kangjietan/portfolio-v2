@@ -31,7 +31,7 @@ const FullResume: React.FunctionComponent = () => {
   }, []);
 
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "profile2.jpeg" }) {
         childImageSharp {
           gatsbyImageData
