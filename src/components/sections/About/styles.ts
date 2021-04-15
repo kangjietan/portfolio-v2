@@ -80,7 +80,17 @@ export const ImgContainer = styled.div`
   }
 `;
 
+export const ReadMoreContainer = styled.div`
+  color: var(--on-bg);
+  align-self: flex-end;
+  margin: 1rem;
+  text-decoration: underline;
+  font-size: 1.1rem;
+`;
+
 export const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 75%;
   color: var(--on-bg);
 
