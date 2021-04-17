@@ -13,7 +13,7 @@ interface ParallaxProps {
   limit: number;
 }
 
-export const AboutContainer = styled.div`
+const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ export const AboutContainer = styled.div`
   }
 `;
 
-export const ParallaxContainer = styled.div`
+const ParallaxContainer = styled.div`
   transform: ${(props: ParallaxProps) => {
     const { pageOffset } = props;
     if (pageOffset === 0) return "none";
@@ -36,12 +36,12 @@ export const ParallaxContainer = styled.div`
   }};
 `;
 
-export const ImageContainer = styled.div`
+const ImageContainer = styled.div`
   width: 25rem;
   margin-right: 1rem;
 `;
 
-export const AboutMeContainer = styled.div`
+const AboutMeContainer = styled.div`
   width: 50%;
 `;
 
@@ -67,7 +67,7 @@ const About: React.FunctionComponent = () => {
   `);
 
   const image = getImage(data.file)!;
-  
+
   return (
     <AboutContainer>
       <ParallaxContainer pageOffset={offsetY} direction="up" limit={0}>

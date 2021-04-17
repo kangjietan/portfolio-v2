@@ -11,7 +11,7 @@ import Education from "./components/Education";
 // @ts-ignore
 import Fade from "react-reveal/Fade";
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ export const Container = styled.div`
   padding: 0px 150px;
 `;
 
-export const BackHomeContainer = styled.div`
+const BackHomeContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
