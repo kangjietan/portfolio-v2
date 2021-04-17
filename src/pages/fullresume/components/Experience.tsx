@@ -4,27 +4,30 @@ import styled from "styled-components";
 
 const textColor = "#8C8C8C";
 
-// EXPERIENCE //
-export const ExperienceContainer = styled.div`
+const ExperienceContainer = styled.div`
   display: flex;
   color: var(--on-bg);
-  width: 900px;
+  width: 1320px;
   margin-top: 2rem;
   flex-direction: column;
 `;
 
-export const ExperienceItem = styled.div`
+const ExperienceItem = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
-export const ExperienceDescription = styled.div`
+const ExperienceDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 150px);
+
   & > * {
-    margin: 1rem;
+    margin-left: 1rem;
   }
 
   & h2 {
     font-weight: 400;
+    width: calc(100% - 150px);
   }
 
   & span {
@@ -32,33 +35,38 @@ export const ExperienceDescription = styled.div`
   }
 `;
 
-export const ExperienceTime = styled.div`
+const ExperienceTime = styled.div`
   font-size: 1.5rem;
   color: ${textColor};
+  width: 150px;
+  margin-top: 1rem;
 
   & > * {
-    margin: 1rem;
+    margin: 0;
   }
 `;
 
-export const ExperienceLocation = styled.div`
+const ExperienceLocation = styled.div`
   margin-left: 1rem;
   font-size: 1.25rem;
+
   & > p {
     color: ${textColor};
     margin: 0;
   }
 `;
 
-export const ExperienceBullets = styled.div``;
-// EXPERIENCE //
+const ExperienceBullets = styled.div`
+  margin-left: 1rem;
+`;
 
-export const EducationContainer = styled.div`
-  display: flex;
-  color: var(--on-bg);
-  width: 1024px;
-  margin-top: 2rem;
-  flex-direction: column;
+export const Bullet = styled.p`
+  color: ${textColor};
+
+  &::before {
+    content: "-";
+    margin-right: 0.25rem;
+  }
 `;
 
 const Experience: React.FunctionComponent = () => {
@@ -70,14 +78,23 @@ const Experience: React.FunctionComponent = () => {
           <h2>
             Summer Camp Leader (Volunteering)<span> - Cameron House</span>
           </h2>
+          <ExperienceLocation>
+            <p>San Francisco, California</p>
+          </ExperienceLocation>
+          <ExperienceBullets>
+            <Bullet>
+              Planned and coordinated mostly outdoor activities along with other
+              leaders for upcoming 8th graders.
+            </Bullet>
+            <Bullet>
+              Supervised outdoor activities such as field trips, cookouts, etc.
+            </Bullet>
+          </ExperienceBullets>
         </ExperienceDescription>
         <ExperienceTime>
           <p>2014</p>
         </ExperienceTime>
       </ExperienceItem>
-      <ExperienceLocation>
-        <p>San Francisco, California</p>
-      </ExperienceLocation>
     </ExperienceContainer>
   );
 };
