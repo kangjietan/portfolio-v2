@@ -7,47 +7,62 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const textColor = "#8C8C8C";
 
-interface ParallaxProps {
-  pageOffset: number;
-  direction: string;
-  limit: number;
-}
-
 const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--on-bg);
-  max-width: 1440px;
+  max-width: 1320px;
   margin-top: 10rem;
 
   & p {
     font-size: 1.1rem;
     color: ${textColor};
   }
+
+  @media (max-width: 1400px) {
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
-const ParallaxContainer = styled.div`
-  transform: ${(props: ParallaxProps) => {
-    const { pageOffset } = props;
-    if (pageOffset === 0) return "none";
-
-    return `translateY(-${pageOffset * 0.5}px)`;
-  }};
-`;
+const ParallaxContainer = styled.div``;
 
 const ImageContainer = styled.div`
   width: 25rem;
   margin-right: 1rem;
+
+  @media (max-width: 1300px) {
+    width: 23rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 21rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 const AboutMeContainer = styled.div`
-  width: 50%;
+  width: 100%;
 `;
 
 const About: React.FunctionComponent = () => {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -70,7 +85,9 @@ const About: React.FunctionComponent = () => {
 
   return (
     <AboutContainer>
-      <ParallaxContainer pageOffset={offsetY} direction="up" limit={0}>
+      <ParallaxContainer
+        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
+      >
         <ImageContainer>
           <GatsbyImage image={image} alt="profile image" />
         </ImageContainer>
