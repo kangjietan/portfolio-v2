@@ -7,19 +7,24 @@ const textColor = "#8C8C8C";
 const ExperienceContainer = styled.div`
   display: flex;
   color: var(--on-bg);
-  width: 1320px;
+  width: 100%;
+  max-width: 1320px;
   margin-top: 2rem;
   flex-direction: column;
 `;
 
 const ExperienceItem = styled.div`
   display: flex;
+
+  @media (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const ExperienceDescription = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(100% - 150px);
+  margin-right: auto;
 
   & > * {
     margin-left: 1rem;
@@ -27,7 +32,6 @@ const ExperienceDescription = styled.div`
 
   & h2 {
     font-weight: 400;
-    width: calc(100% - 150px);
   }
 
   & span {
@@ -36,13 +40,34 @@ const ExperienceDescription = styled.div`
 `;
 
 const ExperienceTime = styled.div`
+  display: flex;
+  justify-content: flex-end;
   font-size: 1.5rem;
   color: ${textColor};
   width: 150px;
   margin-top: 1rem;
+  margin-left: 1rem;
 
   & > * {
     margin: 0;
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 576px) {
+    margin-left: 0;
+    font-size: 1.25rem;
+    justify-content: flex-start;
   }
 `;
 

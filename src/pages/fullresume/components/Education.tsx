@@ -1,4 +1,3 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,20 +6,25 @@ const textColor = "#8C8C8C";
 const EducationContainer = styled.div`
   display: flex;
   color: var(--on-bg);
-  width: 1320px;
+  max-width: 1320px;
+  width: 100%;
   margin-top: 2rem;
   flex-direction: column;
 `;
 
 const EducationItem = styled.div`
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  @media (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const EducationDescription = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(100% - 150px);
+  margin-right: auto;
 
   & > * {
     margin-left: 1rem;
@@ -36,13 +40,34 @@ const EducationDescription = styled.div`
 `;
 
 const EducationTime = styled.div`
+  display: flex;
+  justify-content: flex-end;
   font-size: 1.5rem;
   color: ${textColor};
   width: 150px;
   margin-top: 1rem;
+  margin-left: 1rem;
 
   & > * {
     margin: 0;
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 576px) {
+    margin-left: 0;
+    font-size: 1.25rem;
+    justify-content: flex-start;
   }
 `;
 
@@ -103,7 +128,7 @@ const Education = () => {
           </EducationBullets>
         </EducationDescription>
         <EducationTime>
-          <p>2019-2020</p>
+          <p>2019 - 2020</p>
         </EducationTime>
       </EducationItem>
       <EducationItem>
@@ -123,7 +148,7 @@ const Education = () => {
           </EducationBullets>
         </EducationDescription>
         <EducationTime>
-          <p>2015-2019</p>
+          <p>2015 - 2019</p>
         </EducationTime>
       </EducationItem>
     </EducationContainer>
