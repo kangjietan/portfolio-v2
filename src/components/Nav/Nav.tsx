@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useScrollDirection from "../hooks/useScrollDirection";
+import { useScrollDirection } from "../hooks";
 
 import {
   Header,
