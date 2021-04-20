@@ -1,6 +1,8 @@
 import React from "react";
-
 import styled from "styled-components";
+
+// @ts-ignore
+import Fade from "react-reveal/Fade";
 
 const textColor = "#8C8C8C";
 
@@ -97,29 +99,34 @@ export const Bullet = styled.p`
 const Experience: React.FunctionComponent = () => {
   return (
     <ExperienceContainer>
-      <h1>Experience</h1>
-      <ExperienceItem>
-        <ExperienceDescription>
-          <h2>
-            Summer Camp Leader (Volunteering)<span> - Cameron House</span>
-          </h2>
-          <ExperienceLocation>
-            <p>San Francisco, California</p>
-          </ExperienceLocation>
-          <ExperienceBullets>
-            <Bullet>
-              Planned and coordinated mostly outdoor activities along with other
-              leaders for upcoming 8th graders.
-            </Bullet>
-            <Bullet>
-              Supervised outdoor activities such as field trips, cookouts, etc.
-            </Bullet>
-          </ExperienceBullets>
-        </ExperienceDescription>
-        <ExperienceTime>
-          <p>2014</p>
-        </ExperienceTime>
-      </ExperienceItem>
+      <Fade>
+        <h1>Experience</h1>
+      </Fade>
+      <Fade>
+        <ExperienceItem>
+          <ExperienceDescription>
+            <h2>
+              Summer Camp Leader (Volunteering)<span> - Cameron House</span>
+            </h2>
+            <ExperienceLocation>
+              <p>San Francisco, California</p>
+            </ExperienceLocation>
+            <ExperienceBullets>
+              <Bullet>
+                Planned and coordinated mostly outdoor activities along with
+                other leaders for upcoming 8th graders.
+              </Bullet>
+              <Bullet>
+                Supervised outdoor activities such as field trips, cookouts,
+                etc.
+              </Bullet>
+            </ExperienceBullets>
+          </ExperienceDescription>
+          <ExperienceTime>
+            <p>2014</p>
+          </ExperienceTime>
+        </ExperienceItem>
+      </Fade>
     </ExperienceContainer>
   );
 };

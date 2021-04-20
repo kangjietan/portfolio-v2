@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// @ts-ignore
+import Fade from "react-reveal/Fade";
+
 const textColor = "#8C8C8C";
 
 const EducationContainer = styled.div`
@@ -114,43 +117,51 @@ const classes = [
 const Education = () => {
   return (
     <EducationContainer>
-      <h1>Education</h1>
-      <EducationItem>
-        <EducationDescription>
-          <h2>
-            Software Engineering Immersive<span> - Hack Reactor</span>
-          </h2>
-          <EducationLocation>
-            <p>San Francisco, California</p>
-          </EducationLocation>
-          <EducationBullets>
-            <Bullet>Full Stack JavaScript web development bootcamp.</Bullet>
-          </EducationBullets>
-        </EducationDescription>
-        <EducationTime>
-          <p>2019 - 2020</p>
-        </EducationTime>
-      </EducationItem>
-      <EducationItem>
-        <EducationDescription>
-          <h2>
-            B.S., Technology and Information Management
-            <span> - University of California, Santa Cruz</span>
-          </h2>
-          <EducationLocation>
-            <p>Santa Cruz, California</p>
-          </EducationLocation>
-          <EducationBullets>
-            <p>Relevant Coursework:</p>
-            {classes.map((item) => (
-              <Bullet>{item}</Bullet>
-            ))}
-          </EducationBullets>
-        </EducationDescription>
-        <EducationTime>
-          <p>2015 - 2019</p>
-        </EducationTime>
-      </EducationItem>
+      <Fade>
+        <h1>Education</h1>
+      </Fade>
+      <Fade>
+        <EducationItem>
+          <EducationDescription>
+            <h2>
+              Software Engineering Immersive<span> - Hack Reactor</span>
+            </h2>
+            <EducationLocation>
+              <p>San Francisco, California</p>
+            </EducationLocation>
+            <EducationBullets>
+              <Bullet>Full Stack JavaScript web development bootcamp.</Bullet>
+            </EducationBullets>
+          </EducationDescription>
+          <EducationTime>
+            <p>2019 - 2020</p>
+          </EducationTime>
+        </EducationItem>
+      </Fade>
+      <Fade>
+        <EducationItem>
+          <EducationDescription>
+            <h2>
+              B.S., Technology and Information Management
+              <span> - University of California, Santa Cruz</span>
+            </h2>
+            <EducationLocation>
+              <p>Santa Cruz, California</p>
+            </EducationLocation>
+            <Fade>
+              <EducationBullets>
+                <p>Relevant Coursework:</p>
+                {classes.map((item, idx) => (
+                  <Bullet key={idx}>{item}</Bullet>
+                ))}
+              </EducationBullets>
+            </Fade>
+          </EducationDescription>
+          <EducationTime>
+            <p>2015 - 2019</p>
+          </EducationTime>
+        </EducationItem>
+      </Fade>
     </EducationContainer>
   );
 };

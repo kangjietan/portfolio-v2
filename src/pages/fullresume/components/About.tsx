@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-
 import styled from "styled-components";
 
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+// @ts-ignore
+import Fade from "react-reveal/Fade";
 
 const textColor = "#8C8C8C";
 
@@ -85,13 +87,15 @@ const About: React.FunctionComponent = () => {
 
   return (
     <AboutContainer>
-      <ParallaxContainer
-        style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
-      >
-        <ImageContainer>
-          <GatsbyImage image={image} alt="profile image" />
-        </ImageContainer>
-      </ParallaxContainer>
+      <Fade top>
+        <ParallaxContainer
+          style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
+        >
+          <ImageContainer>
+            <GatsbyImage image={image} alt="profile image" />
+          </ImageContainer>
+        </ParallaxContainer>
+      </Fade>
       <AboutMeContainer>
         <h1>My Journey</h1>
         <p>
