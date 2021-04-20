@@ -16,10 +16,10 @@ import { Menu } from "../index";
 import Fade from "react-reveal/Fade";
 
 const NavLinks = [
-  { section: "/#about", name: "About" },
-  { section: "/#skills", name: "Skills" },
-  { section: "/#projects", name: "Projects" },
-  { section: "/#contact", name: "Contact" },
+  { section: "./#about", name: "About" },
+  { section: "./#skills", name: "Skills" },
+  { section: "./#projects", name: "Projects" },
+  { section: "./#contact", name: "Contact" },
 ];
 
 const Nav: React.FunctionComponent = () => {
@@ -37,7 +37,7 @@ const Nav: React.FunctionComponent = () => {
     <Header direction={direction}>
       <Navigation>
         <LogoContainer>
-          <a href="/">
+          <a href="./">
             <svg
               id="logo"
               width="135"
