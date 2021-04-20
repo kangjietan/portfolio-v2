@@ -1,2 +1,0 @@
-(self.webpackChunkportfolio_v2=self.webpackChunkportfolio_v2||[]).push([[254],{8891:function(n,e,o){"use strict";o.r(e);var t=o(7294),i=o(9).ZP.div.withConfig({displayName:"Education__EducationContainer",componentId:"sc-1kgx4nn-0"})(["display:flex;color:var(--on-bg);width:1024px;margin-top:2rem;flex-direction:column;"]);e.default=function(){return t.createElement(i,null,t.createElement("h1",null,"Education"))}}}]);
-//# sourceMappingURL=component---src-pages-fullresume-components-education-tsx-c2115190157ccc9afe0f.js.map
