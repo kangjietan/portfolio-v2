@@ -1,6 +1,7 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { FileSystemNode } from "gatsby-source-filesystem";
+
+import { useProjectData } from "../../hooks";
 
 import {
   ContentContainer,
@@ -31,32 +32,7 @@ export interface ProjectNode {
 }
 
 const Projects: React.FunctionComponent = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allMdx(
-        filter: { fileAbsolutePath: { regex: "/content/" } }
-        sort: { fields: [frontmatter___place], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              github
-              site
-              tech
-              image {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-            excerpt
-          }
-        }
-      }
-    }
-  `);
-  const projects = data.allMdx.edges;
+  const projects = useProjectData();
 
   return (
     <ProjectsSection id="projects">
