@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import Projects from './components/Projects';
 
 // @ts-ignore
 import Fade from "react-reveal/Fade";
@@ -49,13 +50,16 @@ const FullResume: React.FunctionComponent = () => {
   return (
     <>
       <GlobalStyle />
-      <BackHomeContainer>
-        <Link to="/">&larr; Back to portfolio</Link>
-      </BackHomeContainer>
+      <Fade left>
+        <BackHomeContainer>
+          <Link to="/">&larr; Back to portfolio</Link>
+        </BackHomeContainer>
+      </Fade>
       <Container>
         <About />
         <Experience />
         <Education />
+        <Projects />
       </Container>
     </>
   );
