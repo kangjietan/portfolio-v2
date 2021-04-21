@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 
 // @ts-ignore
 import Fade from "react-reveal/Fade";
+import OtherWork from "./components/OtherWork";
 
 const Container = styled.div`
   display: flex;
@@ -60,6 +61,7 @@ const FullResume: React.FunctionComponent = () => {
         <Experience />
         <Education />
         <Projects />
+        <OtherWork />
       </Container>
     </>
   );
