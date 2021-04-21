@@ -89,7 +89,8 @@ const ExperienceBullets = styled.div`
 
 export const Bullet = styled.p`
   color: ${textColor};
-
+  font-size: 1.1rem;
+  
   &::before {
     content: "-";
     margin-right: 0.25rem;

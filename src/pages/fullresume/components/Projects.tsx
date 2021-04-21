@@ -73,12 +73,14 @@ const LiveSiteLink = styled.a`
 
 const ProjectDescription = styled.div`
   color: ${textColor};
+  font-size: 1.1rem;
 `;
 
 const ProjectBullets = styled.div``;
 
 const Bullet = styled.p`
   color: ${textColor};
+  font-size: 1.1rem;
 
   &::before {
     content: "-";
