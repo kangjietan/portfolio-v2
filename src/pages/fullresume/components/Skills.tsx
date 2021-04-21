@@ -99,14 +99,16 @@ const Skills: React.FunctionComponent = () => {
       }
     >
       <h1>Skills</h1>
-      <Container>
-        {skills.map((skill, idx) => (
-          <Skill key={idx}>
-            <p>{skill}</p>
-            <SkillOverlay className="item" />
-          </Skill>
-        ))}
-      </Container>
+      <Fade>
+        <Container>
+          {skills.map((skill, idx) => (
+            <Skill key={idx}>
+              <p>{skill}</p>
+              <SkillOverlay className="item" />
+            </Skill>
+          ))}
+        </Container>
+      </Fade>
     </SkillsContainer>
   );
 };
