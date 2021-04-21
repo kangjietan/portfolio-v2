@@ -63,7 +63,13 @@ const AboutMeContainer = styled.div`
 const About: React.FunctionComponent = () => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => {
-    setOffsetY(window.pageYOffset);
+    if (window.pageYOffset < 50) {
+      setOffsetY(0);
+    } else {
+      if (window.pageYOffset < 600) {
+        setOffsetY(window.pageYOffset - 50);
+      }
+    }
   };
 
   useEffect(() => {
