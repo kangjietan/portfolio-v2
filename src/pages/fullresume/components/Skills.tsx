@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // @ts-ignore
@@ -10,12 +10,13 @@ const SkillsContainer = styled.div`
   max-width: 1320px;
   flex-direction: column;
   width: 100%;
-  margin: 2rem 0px 10rem 0px;
+  margin: 6rem 0px 10rem 0px;
 `;
 
 const Container = styled.div`
   display: flex;
   z-index: 2;
+  margin-top: 2rem;
   margin-left: 1rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,11 +42,11 @@ const SkillOverlay = styled.div`
   height: 100%;
   opacity: 24%;
   border: 1px solid var(--on-bg);
-  transition: 0.5s ease-in-out;
+  transition: border-radius 0.5s ease;
 
   &:hover {
     background-color: var(--on-bg);
-    opacity: 7%;
+    opacity: 10%;
     border-radius: 50%;
   }
 `;
@@ -65,7 +66,10 @@ const skills = [
 ];
 
 const Skills: React.FunctionComponent = () => {
-  /** https://codepen.io/rauldronca/pen/MZjEBd */
+  /**
+   * https://codepen.io/rauldronca/pen/MZjEBd
+   * Rotate towards mouse.
+   */
   const handleHover = (e: MouseEvent) => {
     const sqrs = document.querySelectorAll(".item");
 
