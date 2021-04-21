@@ -6,16 +6,16 @@ import Fade from "react-reveal/Fade";
 
 const textColor = "#8C8C8C";
 
-export const OtherWorkContainer = styled.div`
+const OtherWorkContainer = styled.div`
   display: flex;
   color: var(--on-bg);
   max-width: 1320px;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 6rem;
   flex-direction: column;
 `;
 
-export const WorkItem = styled.div`
+const WorkItem = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
@@ -32,7 +32,7 @@ export const WorkItem = styled.div`
   }
 `;
 
-export const WorkTitleLinks = styled.div`
+const WorkTitleLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,16 +44,22 @@ export const WorkTitleLinks = styled.div`
   }
 `;
 
-export const WorkLinks = styled.div``;
+const WorkLinks = styled.div`
+  @media (max-width: 576px) {
+    & p {
+      margin-bottom: 0;
+    }
+  }
+`;
 
-export const GitHubLink = styled.a``;
+const GitHubLink = styled.a``;
 
-export const WorkDescription = styled.div`
+const WorkDescription = styled.div`
   color: ${textColor};
   font-size: 1.1rem;
 `;
 
-export const TechContainer = styled.div`
+const TechContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   color: ${textColor};
@@ -77,7 +83,7 @@ const works = [
     title: "Portfolio-v1",
     description: "My first portfolio developed with HTML5/CSS3 and Boostrap.",
     github: "https://github.com/kangjietan/portfolio-v1",
-    tech: ["HTML5", "CSS", "Bootstrap"],
+    tech: ["HTML5", "CSS3", "Bootstrap"],
   },
   {
     title: "Introduction",
@@ -95,31 +101,35 @@ const works = [
 const OtherWork: React.FunctionComponent = () => {
   return (
     <OtherWorkContainer>
-      <h1>Other Work</h1>
-      {works.map((work, idx) => (
-        <WorkItem key={idx}>
-          <WorkTitleLinks>
-            <a href={work.github} target="_blank">
-              <h2>{work.title}</h2>
-            </a>
-            <WorkLinks>
-              <GitHubLink href={work.github} target="_blank">
-                GitHub
-              </GitHubLink>
-            </WorkLinks>
-          </WorkTitleLinks>
-          <WorkDescription>
-            <p>{work.description}</p>
-          </WorkDescription>
-          {work.tech ? (
-            <TechContainer>
-              {work.tech.map((tech, idx) => (
-                <p key={idx}>{tech}</p>
-              ))}
-            </TechContainer>
-          ) : null}
-        </WorkItem>
-      ))}
+      <Fade>
+        <h1>Other Work</h1>
+        {works.map((work, idx) => (
+          <Fade key={idx}>
+            <WorkItem>
+              <WorkTitleLinks>
+                <a href={work.github} target="_blank">
+                  <h2>{work.title}</h2>
+                </a>
+                <WorkLinks>
+                  <GitHubLink href={work.github} target="_blank">
+                    <p>GitHub</p>
+                  </GitHubLink>
+                </WorkLinks>
+              </WorkTitleLinks>
+              <WorkDescription>
+                <p>{work.description}</p>
+              </WorkDescription>
+              {work.tech ? (
+                <TechContainer>
+                  {work.tech.map((tech, idx) => (
+                    <p key={idx}>{tech}</p>
+                  ))}
+                </TechContainer>
+              ) : null}
+            </WorkItem>
+          </Fade>
+        ))}
+      </Fade>
     </OtherWorkContainer>
   );
 };
