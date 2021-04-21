@@ -28,7 +28,7 @@ const ProjectContainer = styled.div`
   color: var(--on-bg);
   max-width: 1320px;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 6rem;
   flex-direction: column;
 `;
 
@@ -63,6 +63,12 @@ const ProjectTitleLinks = styled.div`
 
 const ProjectLinks = styled.div`
   display: flex;
+
+  @media (max-width: 576px) {
+    & p {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 const GitHubLink = styled.a``;
@@ -130,7 +136,7 @@ const technologies = [
   ],
   [
     "React",
-    "CSS",
+    "CSS3",
     "Express.js",
     "Yelp Fusion API",
     "Google Maps JavaScript API",

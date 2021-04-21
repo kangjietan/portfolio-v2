@@ -11,7 +11,7 @@ const EducationContainer = styled.div`
   color: var(--on-bg);
   max-width: 1320px;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 6rem;
   flex-direction: column;
 `;
 

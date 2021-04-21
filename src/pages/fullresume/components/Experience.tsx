@@ -11,7 +11,7 @@ const ExperienceContainer = styled.div`
   color: var(--on-bg);
   width: 100%;
   max-width: 1320px;
-  margin-top: 2rem;
+  margin-top: 6rem;
   flex-direction: column;
 `;
 
@@ -90,7 +90,7 @@ const ExperienceBullets = styled.div`
 export const Bullet = styled.p`
   color: ${textColor};
   font-size: 1.1rem;
-  
+
   &::before {
     content: "-";
     margin-right: 0.25rem;
