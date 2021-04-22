@@ -38,6 +38,25 @@ const GlobalStyle = createGlobalStyle`
     color: var(--secondary-color);
   }
 
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--on-bg) var(--bg-color);
+  }
+
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--on-bg);
+    border: 3px solid var(--bg-color);
+    border-radius: 10px;
+  }
+
   ${KeyFrames}
 `;
 
