@@ -81,7 +81,7 @@ const works = [
   },
   {
     title: "Portfolio-v1",
-    description: "My first portfolio developed with HTML5/CSS3 and Boostrap.",
+    description: "My first portfolio developed with HTML5/CSS3 and Bootstrap.",
     github: "https://github.com/kangjietan/portfolio-v1",
     tech: ["HTML5", "CSS3", "Bootstrap"],
   },
