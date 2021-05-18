@@ -52,12 +52,12 @@ const Contact: React.FunctionComponent = () => {
             </SocialContainer>
           </SocialsContainer>
           <ResumeContainer>
-            <a href="/Resume.pdf" target="_blank">
+            <a href="/Resume_KangJieTan.pdf" target="_blank">
               <ResumeFileSVGContainer>
                 <FontAwesomeIcon icon={["fas", "file-pdf"]} />
               </ResumeFileSVGContainer>
             </a>
-            <a href="/Resume.pdf" target="_blank">
+            <a href="/Resume_KangJieTan.pdf" target="_blank">
               <ViewResume>View Resume PDF</ViewResume>
             </a>
           </ResumeContainer>
