@@ -73,6 +73,26 @@ const TechContainer = styled.div`
 
 const works = [
   {
+    title: "Twitch Stream Discovery",
+    description:
+      "Discover new streams by watching top clips related to what is currently being streamed on the channel.",
+    github: "https://github.com/kangjietan/streamforge",
+    tech: ["TypeScript", "React.js", "Styled-components", "Twitch API"],
+  },
+  {
+    title: "Appointment Scheduler",
+    description:
+      "Web application that allows uesrs to schedule appointments with one another and have the ability to accept, decline, and view their appointments.",
+    github: "https://github.com/kangjietan/pocket-rn",
+    tech: [
+      "TypeScript",
+      "React.js",
+      "Firebase",
+      "Firebase Functions",
+      "Cloud Firestore",
+    ],
+  },
+  {
     title: "Portfolio-v2",
     description:
       "Second iteration of my personal portfolio. This current website developed with Gatsby and TypeScript.",
@@ -100,7 +120,7 @@ const works = [
 
 const OtherWork: React.FunctionComponent = () => {
   return (
-    <OtherWorkContainer>
+    <OtherWorkContainer id="otherwork">
       <Fade>
         <h1>Other Work</h1>
         {works.map((work, idx) => (
