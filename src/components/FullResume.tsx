@@ -28,7 +28,7 @@ export const Container = styled.div`
 const FullResume: React.FunctionComponent = () => {
   return (
     <Container>
-      <Link to="/fullresume">View Full Resume</Link>
+      <Link to="/fullresume">View Full Resume Page</Link>
     </Container>
   );
 };
