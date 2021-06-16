@@ -38,3 +38,13 @@ export const Heading = styled.h1`
 export const ProjectsContainer = styled.div`
   padding: 1rem;
 `;
+
+export const ViewOtherWorkContainer = styled.div`
+  font-size: 1.5rem;
+  align-self: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 10px;
+`;

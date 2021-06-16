@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { FileSystemNode } from "gatsby-source-filesystem";
 
 import { useProjectData } from "../../hooks";
@@ -9,6 +10,7 @@ import {
   ProjectsContainer,
   ProjectsSection,
   SectionHeadingContainer,
+  ViewOtherWorkContainer,
 } from "./styles";
 
 import Project from "./Project/Project";
@@ -50,6 +52,9 @@ const Projects: React.FunctionComponent = () => {
               />
             ))}
           </ProjectsContainer>
+          <ViewOtherWorkContainer>
+            <Link to="/fullresume/#otherwork">View other projects</Link>
+          </ViewOtherWorkContainer>
         </ContentContainer>
       </Fade>
     </ProjectsSection>
