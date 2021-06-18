@@ -47,4 +47,12 @@ export const ViewOtherWorkContainer = styled.div`
   border: 2px solid var(--primary-color);
   padding: 0.5rem;
   border-radius: 10px;
+
+  @media (max-width: 340px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 260px) {
+    font-size: 0.75rem;
+  }
 `;

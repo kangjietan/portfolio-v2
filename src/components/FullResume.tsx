@@ -16,12 +16,12 @@ export const Container = styled.div`
     border-radius: 10px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 460px) {
     font-size: clamp(1rem, 0.5rem + 4vw, 1.5rem);
   }
 
-  @media (max-width: 250px) {
-    font-size: clamp(0rem, 0rem + 4.8vw, 0.75rem);
+  @media (max-width: 330px) {
+    font-size: clamp(0.5rem, 0rem + 4.8vw, 0.9rem);
   }
 `;
 
