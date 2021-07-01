@@ -116,6 +116,22 @@ const works = [
     description: "Github repository of leetcode problems I've worked on.",
     github: "https://github.com/kangjietan/leetcode",
   },
+  {
+    title: "Computational Methods and Applications",
+    description:
+      "UCSC coursework: Applications of computational methods to solving mathematical problems using Matlab. Topics include solution of nonlinear equations, linear systems, differential equations, sparse matrix solver, and eigenvalue problems.",
+    github:
+      "https://github.com/kangjietan/Computational-Methods-and-Applications",
+      tech: ["MATLAB", "GNU Octave"]
+  },
+  {
+    title: "Computer Systems and Assembly Language",
+    description:
+      "UCSC coursework: Introduction to computer systems and assembly language and how computers compute in hardware and software. Topics include digital logic, number systems, data structures, compiling/assembly process, basics of system software, and computer architecture.",
+    github:
+      "https://github.com/kangjietan/Computer-Systems-and-Assembly-Language",
+      tech: ["MIPS", "Multimedia Logic", "MARS (MIPS Assembler and Runtime Simulator)"]
+  },
 ];
 
 const OtherWork: React.FunctionComponent = () => {
