@@ -37,6 +37,7 @@ const WorkTitleLinks = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 
   @media (max-width: 576px) {
     flex-direction: column;
